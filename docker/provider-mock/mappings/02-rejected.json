@@ -1,0 +1,12 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST", "urlPath": "/provider/v1/activate",
+    "bodyPatterns": [{ "matchesJsonPath": { "expression": "$.productCode", "matches": "INVALID.*" } }]
+  },
+  "response": {
+    "status": 400,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "error": "PRODUCT_NOT_AVAILABLE" }
+  }
+}
